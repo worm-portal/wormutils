@@ -1,6 +1,6 @@
 from .chemlabel import chemlabel
 
-def format_equation(species, stoich, charge_sign_at_end=False):
+def format_equation(species, stoich, charge_sign_at_end=False, sign="arrow"):
     """
     Format a chemical equation to display in HTML
     (e.g., Plotly plots)
@@ -15,7 +15,10 @@ def format_equation(species, stoich, charge_sign_at_end=False):
     
     charge_sign_at_end : bool, default False
         Display charge with sign after the number (e.g. SO4 2-)?
-        
+
+    sign : str, default "arrow"
+        Which symbol should be used to determine reaction direction? Can be
+        "arrow", "equalsign", or "equilibrium"
     
     Returns
     -------
@@ -40,7 +43,16 @@ def format_equation(species, stoich, charge_sign_at_end=False):
     
     reactants_together = " + ".join(reactants_list)
     products_together = " + ".join(products_list)
+
+    if sign == "arrow":
+        symbol = " → "
+    elif sign == "equalsign":
+        symbol = " = "
+    elif sign == "equilibrium":
+        symbol = " ⇌ "
+    else:
+        symbol = " → "
     
-    equation_str = " → ".join([reactants_together, products_together])
+    equation_str = symbol.join([reactants_together, products_together])
     
     return equation_str

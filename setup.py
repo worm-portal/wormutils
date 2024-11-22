@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="WORMutils",
-    version="0.0.3",
+    version="0.0.4",
     author="Grayson Boyer",
     author_email="gmboyer@asu.edu",
     description="A package for common functions used in other WORM codes",
