@@ -1,4 +1,5 @@
 from chemparse import parse_formula
+import pandas as pd
 
 def check_balance(formulas, stoich):
     """

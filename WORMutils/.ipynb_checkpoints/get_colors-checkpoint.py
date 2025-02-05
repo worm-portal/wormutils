@@ -1,4 +1,8 @@
 from .Error_Handler import Error_Handler
+# matplotlib for static plots
+import matplotlib
+import matplotlib.pyplot as plt
+import matplotlib.cm as cm
 
 def get_colors(colormap, ncol, alpha=1.0, hide_traceback=True):
 
