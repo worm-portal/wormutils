@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: WORMutils
-Version: 0.0.4
+Version: 0.0.5
 Summary: A package for common functions used in other WORM codes
 Author: Grayson Boyer
 Author-email: gmboyer@asu.edu
@@ -12,6 +12,9 @@ Description-Content-Type: text/markdown
 License-File: LICENSE.txt
 Requires-Dist: pandas
 Requires-Dist: chemparse
+Requires-Dist: requests
+Requires-Dist: matplotlib
+Requires-Dist: rpy2
 
 # WORMutils
 
