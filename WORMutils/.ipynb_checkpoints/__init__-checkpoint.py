@@ -1,4 +1,4 @@
-from .find_HKF import find_HKF
+from .find_HKF import find_HKF, find_HKF_test
 from .chemlabel import chemlabel
 from .format_equation import format_equation
 from .check_balance import check_balance
