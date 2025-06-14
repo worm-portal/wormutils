@@ -1,4 +1,5 @@
 import pandas as pd
+from datetime import datetime
 
 def find_HKF(Gh=float('NaN'), V=float('NaN'), Cp=float('NaN'),
              Gf=float('NaN'), Hf=float('NaN'), Saq=float('NaN'),
@@ -6,7 +7,9 @@ def find_HKF(Gh=float('NaN'), V=float('NaN'), Cp=float('NaN'),
              a4=float('NaN'), c1=float('NaN'), c2=float('NaN'),
              omega=float('NaN'), organic=False, organic_acid=False, volatile=False,
              HKF_scale=True, DEW=False, phase_TrPr=None, aq_complex=False,
-             print_eq=False):
+             name=None, abbrv=None, formula=None, azero=None, formula_ox=None,
+             dissrxn=None, tag=None, neutral_ion_type=0,
+             wrm_data_output=False, print_eq=False):
     
     """
     Estimate HKF parameters from standard state thermodynamic properties of an
@@ -76,6 +79,48 @@ def find_HKF(Gh=float('NaN'), V=float('NaN'), Cp=float('NaN'),
         an aqueous complex for the sake of the Deep Earth Water (DEW) model. If
         True, equation 129 from Sverjensky 2019 will be used. If False, equation
         8 in Appendix 1 of Sverjensky et al. 2014 will be used.
+
+    name : str, optional
+        Name of the compound. Used when `wrm_data_output`is True. If this
+        compound is going to be used in conjunction with the WORM database, or
+        be used with the AqEquil package, then ensure that the name you choose
+        does not contain spaces (like "acetic-acid" or "my-custom-compound"). 
+        
+    abbrv : str, optional
+        Abbreviation of the compound (e.g., "HexOOH" for hexanoic acid). Used
+        when `wrm_data_output`is True.
+    
+    formula : str, optional
+        Chemical formula for the compound. Used when `wrm_data_output`is True.
+    
+    azero : str, optional
+         The azero parameter of the aqueous compound. Used when
+         `wrm_data_output` is True. If no azero parameter is defined, then one
+         will be estimated based on charge.
+    
+    formula_ox : str, optional
+        Quantities of elements and their oxidation states in the compound. For
+        example, methane's formula_ox would be 'C-4 4H+' and hexanoic acid's
+        would be 'C-3 4C-2 O-2 C- H+'. Used when `wrm_data_output`is True.
+
+    dissrxn : str, optional
+        A dissociation reaction compatible with the 'dissrxn' column in the WORM
+        database. This can be blank if this compound is meant to be a basis
+        species. Used when `wrm_data_output`is True.
+    
+    tag : str, optional
+        A tag compatible with the 'tag' column of the WORM database. Will be
+        blank by default, representing a nonbasis species. Used when
+        `wrm_data_output`is True.
+    
+    neutral_ion_type : int, default 0
+        A neutral ion type compatible with the 'neutral_ion_type' column in the
+        WORM database. The default of 0 means that it is not treated specially
+        if the molecule has a charge of 0. Used when `wrm_data_output`is True.
+    
+    wrm_data_output : bool, default False
+        Output the results as a dataframe that is compatible with the WORM
+        database and is therefore importable into AqEquil and pyCHNOSZ packages?
         
     print_eq : bool, default False
         Print equations used in estimation? Equations are printed in the order
@@ -83,8 +128,13 @@ def find_HKF(Gh=float('NaN'), V=float('NaN'), Cp=float('NaN'),
         
     Returns
     ----------
-    out_dict : dict
-        A dictonary of properties and parameters.
+    hkf : dict or pandas.DataFrame
+        If `wrm_data_output` is False, returns a dictonary of properties and
+        parameters. Otherwise, returns a Pandas dataframe with a format that
+        can be imported as thermodynamic data into AqEquil or pyCHNOSZ packages.
+
+    eq : list of strings
+        A list of steps used to perform the estimation. 
     """
 
     eqs_used = [] # stores a list of strings that describes which equations were used in what order
@@ -126,7 +176,7 @@ def find_HKF(Gh=float('NaN'), V=float('NaN'), Cp=float('NaN'),
 
             if organic_acid and Z==0:
                 omega = 661.98*Saq - 58740
-                eqs_used.append("omega = {} cal/mol = 661.98*Saq - 58740, Eq 60 in Shock 1995".format("{0:.5g}".format(omega)))
+                eqs_used.append("omega = {} cal/mol = 661.98*Saq - 58740, Eq 22 in Shock 1995".format("{0:.5g}".format(omega)))
             elif organic:
                 if volatile:
                     omega = -1514.4*Saq
@@ -370,7 +420,7 @@ def find_HKF(Gh=float('NaN'), V=float('NaN'), Cp=float('NaN'),
         c2 = c2*10**-4
         omega = omega*10**-5
 
-    out_dict = {
+    hkf = {
         "G": Gf,
         "H": Hf,
         "S": Saq,
@@ -386,9 +436,116 @@ def find_HKF(Gh=float('NaN'), V=float('NaN'), Cp=float('NaN'),
         "Z": Z,
         "Vs": Vs,
         "Vn": Vn,
-        "sigma": sigma}
-    
-    return out_dict, eqs_used
+        "sigma": sigma,
+        "organic": organic,
+        "organic_acid": organic_acid}
+
+
+
+    if not wrm_data_output:
+        return hkf, eqs_used
+        
+    else:
+        if name != None:
+            hkf["name"] = name
+        if abbrv != None:
+            hkf["abbrv"] = abbrv
+        if formula != None:
+            hkf["formula"] = formula
+        if formula_ox != None:
+            hkf["formula_ox"] = formula_ox
+        if azero != None:
+            hkf["azero"] = azero
+        if dissrxn != None:
+            hkf["dissrxn"] = dissrxn
+        if tag != None:
+            hkf["tag"] = tag
+        if neutral_ion_type != None:
+            hkf["neutral_ion_type"] = neutral_ion_type
+        
+        this_date = datetime.today().strftime('%Y%m%d') 
+        
+        def _est_azero(Z):
+            azero = 4
+            if Z == 2:
+                azero = 6
+            elif Z == 3:
+                azero = 9
+            elif Z == 4:
+                azero = 11
+
+            eqs_used.append("azero estimated as {}".format(azero)) # todo: track down where this comes from
+            return azero
+        
+        if 'azero' in list(hkf.keys()):
+            if hkf['azero'] == None:
+                azero = _est_azero(hkf['Z'])
+            else:
+                azero = hkf['azero']
+        else:
+            azero = _est_azero(hkf['Z'])
+        
+        if hkf['organic'] or hkf['organic_acid']:
+            cat_1 = "organic_aq"
+        else:
+            cat_1 = "inorganic_aq"
+        
+        if 'dissrxn' in list(hkf.keys()):
+            if hkf['dissrxn'] != None:
+                dissrxn = hkf['dissrxn']
+            else:
+                dissrxn = ""
+        else:
+            dissrxn = ""
+        
+        if 'tag' in list(hkf.keys()):
+            if hkf['tag'] != None:
+                tag = hkf['tag']
+            else:
+                tag = ""
+        else:
+            tag = ""
+        
+        if 'formula_ox' in list(hkf.keys()):
+            if hkf['formula_ox'] != None:
+                formula_ox = hkf['formula_ox']
+            else:
+                formula_ox = ""
+        else:
+            formula_ox = ""
+        
+        data={
+            "name": [hkf['name']],
+            "abbrv": [hkf['abbrv']],
+            "formula": [hkf['formula']],
+            "state": ["aq"],
+            "ref1": ["findHKF"],
+            "ref2": [""],
+            "date": [this_date],
+            "E_units": ["cal"],
+            "G": [hkf['G']],
+            "H": [hkf['H']],
+            "S": [hkf['S']],
+            "Cp": [hkf['Cp']],
+            "V": [hkf['V']],
+            "a1.a": [hkf['a1']],
+            "a2.b": [hkf['a2']],
+            "a3.c": [hkf['a3']],
+            "a4.d": [hkf['a4']],
+            "c1.e": [hkf['c1']],
+            "c2.f": [hkf['c2']],
+            "omega.lambda": [hkf['omega']],
+            "z.T":[hkf['Z']],
+            "azero":[azero],
+            "neutral_ion_type":[hkf['neutral_ion_type']],
+            "dissrxn":[dissrxn],
+            "tag":[tag],
+            "formula_ox":[formula_ox],
+            "category_1":[cat_1],
+            "category_2":[""],
+        }
+        df = pd.DataFrame(data)
+        return df, eqs_used
 
 def find_HKF_test(print_eq=False):
     

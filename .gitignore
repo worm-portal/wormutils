@@ -1,0 +1,25 @@
+# Ignore everything:
+*
+
+# Include only these folders:
+!WORMutils/
+!WORMutils/*
+!WORMutils/*/
+!html/
+!html/WORMutils/
+!html/WORMutils/*
+!html/WORMutils/*/
+!README.md
+!CITATION.cff
+!LICENSE.txt
+!setup.py
+!.gitignore
+
+# Ignore pycache
+WORMutils/__pycache__/*
+WORMutils/__pycache__/
+WORMutils/__pycache__
+.ipynb_checkpoints
+.ipynb_checkpoints/
+.ipynb_checkpoints/*
+__pycache__/

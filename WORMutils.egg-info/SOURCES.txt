@@ -2,7 +2,6 @@ LICENSE.txt
 README.md
 setup.py
 WORMutils/Error_Handler.py
-WORMutils/R_output.py
 WORMutils/__init__.py
 WORMutils/can_connect_to.py
 WORMutils/check_balance.py

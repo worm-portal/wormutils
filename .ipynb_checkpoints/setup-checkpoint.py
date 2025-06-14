@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="WORMutils",
-    version="0.0.5",
+    version="0.0.6",
     author="Grayson Boyer",
     author_email="gmboyer@asu.edu",
     description="A package for common functions used in other WORM codes",
@@ -19,7 +19,7 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     python_requires='>=3.6',
-    install_requires=['pandas', 'chemparse', 'requests', 'matplotlib', 'rpy2'],
+    install_requires=['pandas', 'chemparse', 'requests', 'matplotlib'],
     include_package_data=True,
     package_data={},
     zip_safe=False

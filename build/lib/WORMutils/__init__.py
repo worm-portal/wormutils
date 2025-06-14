@@ -6,5 +6,4 @@ from .format_coeff import format_coeff
 from .isnotebook import isnotebook
 from .Error_Handler import Error_Handler
 from .get_colors import get_colors
-from .R_output import R_output
 from .can_connect_to import can_connect_to

@@ -2,4 +2,3 @@ pandas
 chemparse
 requests
 matplotlib
-rpy2
