@@ -6,6 +6,7 @@ WORMutils/__init__.py
 WORMutils/can_connect_to.py
 WORMutils/check_balance.py
 WORMutils/chemlabel.py
+WORMutils/convert.py
 WORMutils/find_HKF.py
 WORMutils/format_coeff.py
 WORMutils/format_equation.py
