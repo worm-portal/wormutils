@@ -11,6 +11,7 @@ WORMutils/find_HKF.py
 WORMutils/format_coeff.py
 WORMutils/format_equation.py
 WORMutils/get_colors.py
+WORMutils/import_package_resources.py
 WORMutils/isnotebook.py
 WORMutils.egg-info/PKG-INFO
 WORMutils.egg-info/SOURCES.txt

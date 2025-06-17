@@ -1,4 +1,4 @@
-Metadata-Version: 2.1
+Metadata-Version: 2.4
 Name: WORMutils
 Version: 0.0.6
 Summary: A package for common functions used in other WORM codes
@@ -14,6 +14,15 @@ Requires-Dist: pandas
 Requires-Dist: chemparse
 Requires-Dist: requests
 Requires-Dist: matplotlib
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
 
 # WORMutils
 

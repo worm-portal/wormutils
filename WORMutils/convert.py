@@ -19,7 +19,8 @@ def assign_worm_db_col_dtypes(
                   "P7", "P8"],
         NA_string=""):
 
-    df.replace(NA_string, np.nan, inplace=True)
+    df = df.map(lambda x: float("NaN") if x == NA_string else x)
+    
     for col in float_cols:
         if col in df.columns:
             df[col] = df[col].astype(float)
