@@ -2,18 +2,32 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-<meta name="generator" content="pdoc 0.10.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.6">
 <title>WORMutils.find_HKF API documentation</title>
-<meta name="description" content="" />
-<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
-<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
-<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
-<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
-<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<meta name="description" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source > summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible;min-width:max-content}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin:1em 0}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
 <style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
-<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+/* Collapse source docstrings */
+setTimeout(() => {
+[...document.querySelectorAll('.hljs.language-python > .hljs-string')]
+.filter(el => el.innerHTML.length > 200 && ['"""', "'''"].includes(el.innerHTML.substring(0, 3)))
+.forEach(el => {
+let d = document.createElement('details');
+d.classList.add('hljs-string');
+d.innerHTML = '<summary>"""</summary>' + el.innerHTML.substring(3);
+el.replaceWith(d);
+});
+}, 100);
+})</script>
 </head>
 <body>
 <main>
@@ -22,19 +36,31 @@
 <h1 class="title">Module <code>WORMutils.find_HKF</code></h1>
 </header>
 <section id="section-intro">
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="WORMutils.find_HKF.find_HKF"><code class="name flex">
+<span>def <span class="ident">find_HKF</span></span>(<span>Gh=nan,<br>V=nan,<br>Cp=nan,<br>Gf=nan,<br>Hf=nan,<br>Saq=nan,<br>Z=nan,<br>a1=nan,<br>a2=nan,<br>a3=nan,<br>a4=nan,<br>c1=nan,<br>c2=nan,<br>omega=nan,<br>organic=False,<br>organic_acid=False,<br>volatile=False,<br>HKF_scale=True,<br>DEW=False,<br>phase_TrPr=None,<br>aq_complex=False,<br>name=None,<br>abbrv=None,<br>formula=None,<br>azero=None,<br>formula_ox=None,<br>dissrxn=None,<br>tag=None,<br>neutral_ion_type=0,<br>wrm_data_output=False,<br>print_eq=False)</span>
+</code></dt>
+<dd>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
-<pre><code class="python">import pandas as pd
-
-def find_HKF(Gh=float(&#39;NaN&#39;), V=float(&#39;NaN&#39;), Cp=float(&#39;NaN&#39;),
+<pre><code class="python">def find_HKF(Gh=float(&#39;NaN&#39;), V=float(&#39;NaN&#39;), Cp=float(&#39;NaN&#39;),
              Gf=float(&#39;NaN&#39;), Hf=float(&#39;NaN&#39;), Saq=float(&#39;NaN&#39;),
              Z=float(&#39;NaN&#39;), a1=float(&#39;NaN&#39;), a2=float(&#39;NaN&#39;), a3=float(&#39;NaN&#39;),
              a4=float(&#39;NaN&#39;), c1=float(&#39;NaN&#39;), c2=float(&#39;NaN&#39;),
              omega=float(&#39;NaN&#39;), organic=False, organic_acid=False, volatile=False,
              HKF_scale=True, DEW=False, phase_TrPr=None, aq_complex=False,
-             print_eq=False):
+             name=None, abbrv=None, formula=None, azero=None, formula_ox=None,
+             dissrxn=None, tag=None, neutral_ion_type=0,
+             wrm_data_output=False, print_eq=False):
     
     &#34;&#34;&#34;
     Estimate HKF parameters from standard state thermodynamic properties of an
@@ -104,6 +130,48 @@ def find_HKF(Gh=float(&#39;NaN&#39;), V=float(&#39;NaN&#39;), Cp=float(&#39;NaN&
         an aqueous complex for the sake of the Deep Earth Water (DEW) model. If
         True, equation 129 from Sverjensky 2019 will be used. If False, equation
         8 in Appendix 1 of Sverjensky et al. 2014 will be used.
+
+    name : str, optional
+        Name of the compound. Used when `wrm_data_output`is True. If this
+        compound is going to be used in conjunction with the WORM database, or
+        be used with the AqEquil package, then ensure that the name you choose
+        does not contain spaces (like &#34;acetic-acid&#34; or &#34;my-custom-compound&#34;). 
+        
+    abbrv : str, optional
+        Abbreviation of the compound (e.g., &#34;HexOOH&#34; for hexanoic acid). Used
+        when `wrm_data_output`is True.
+    
+    formula : str, optional
+        Chemical formula for the compound. Used when `wrm_data_output`is True.
+    
+    azero : str, optional
+         The azero parameter of the aqueous compound. Used when
+         `wrm_data_output` is True. If no azero parameter is defined, then one
+         will be estimated based on charge.
+    
+    formula_ox : str, optional
+        Quantities of elements and their oxidation states in the compound. For
+        example, methane&#39;s formula_ox would be &#39;C-4 4H+&#39; and hexanoic acid&#39;s
+        would be &#39;C-3 4C-2 O-2 C- H+&#39;. Used when `wrm_data_output`is True.
+
+    dissrxn : str, optional
+        A dissociation reaction compatible with the &#39;dissrxn&#39; column in the WORM
+        database. This can be blank if this compound is meant to be a basis
+        species. Used when `wrm_data_output`is True.
+    
+    tag : str, optional
+        A tag compatible with the &#39;tag&#39; column of the WORM database. Will be
+        blank by default, representing a nonbasis species. Used when
+        `wrm_data_output`is True.
+    
+    neutral_ion_type : int, default 0
+        A neutral ion type compatible with the &#39;neutral_ion_type&#39; column in the
+        WORM database. The default of 0 means that it is not treated specially
+        if the molecule has a charge of 0. Used when `wrm_data_output`is True.
+    
+    wrm_data_output : bool, default False
+        Output the results as a dataframe that is compatible with the WORM
+        database and is therefore importable into AqEquil and pyCHNOSZ packages?
         
     print_eq : bool, default False
         Print equations used in estimation? Equations are printed in the order
@@ -111,8 +179,13 @@ def find_HKF(Gh=float(&#39;NaN&#39;), V=float(&#39;NaN&#39;), Cp=float(&#39;NaN&
         
     Returns
     ----------
-    out_dict : dict
-        A dictonary of properties and parameters.
+    hkf : dict or pandas.DataFrame
+        If `wrm_data_output` is False, returns a dictonary of properties and
+        parameters. Otherwise, returns a Pandas dataframe with a format that
+        can be imported as thermodynamic data into AqEquil or pyCHNOSZ packages.
+
+    eq : list of strings
+        A list of steps used to perform the estimation. 
     &#34;&#34;&#34;
 
     eqs_used = [] # stores a list of strings that describes which equations were used in what order
@@ -398,7 +471,7 @@ def find_HKF(Gh=float(&#39;NaN&#39;), V=float(&#39;NaN&#39;), Cp=float(&#39;NaN&
         c2 = c2*10**-4
         omega = omega*10**-5
 
-    out_dict = {
+    hkf = {
         &#34;G&#34;: Gf,
         &#34;H&#34;: Hf,
         &#34;S&#34;: Saq,
@@ -414,223 +487,117 @@ def find_HKF(Gh=float(&#39;NaN&#39;), V=float(&#39;NaN&#39;), Cp=float(&#39;NaN&
         &#34;Z&#34;: Z,
         &#34;Vs&#34;: Vs,
         &#34;Vn&#34;: Vn,
-        &#34;sigma&#34;: sigma}
-    
-    return out_dict, eqs_used
+        &#34;sigma&#34;: sigma,
+        &#34;organic&#34;: organic,
+        &#34;organic_acid&#34;: organic_acid}
 
-def find_HKF_test(print_eq=False):
-    
-    &#34;&#34;&#34;
-    Test the HKF estimation function by regenerating published values.
-    
-    Parameters
-    ----------
-    print_eq : bool, default False
-        Print equations used in estimation?
-    &#34;&#34;&#34;
 
-    print(&#34;SELECT ITEMS FROM SHOCK AND HELGESON 1988, TABLE 12\n---------------------------------------------\n&#34;)
 
-    print(&#34;Be+2\n---------&#34;)
-    print(&#34;Input parameters:&#34;)
-    print(&#34;find_HKF(Gf=-83500, Hf=-91500, Saq=-55.7, Cp=-1.3, V=-25.4, Z=2, organic=False)\n&#34;)
-    out, eq = find_HKF(Gf=-83500, Hf=-91500, Saq=-55.7, Cp=-1.3, V=-25.4, Z=2, organic=False)
-    pub = {&#34;omega&#34;:&#34;1.9007&#34;, &#34;a1&#34;:&#34;-1.0684&#34;, &#34;a2&#34;:&#34;-10.3901&#34;,
-           &#34;a3&#34;:&#34;9.8338&#34;, &#34;a4&#34;:&#34;-2.3495&#34;, &#34;c1&#34;:&#34;22.9152&#34;, &#34;c2&#34;:&#34;-3.2994&#34;}
-    print(&#34;Published: {}, \tCalculated: {}, \tomega*10**-5&#34;.format(pub[&#34;omega&#34;], round(out[&#34;omega&#34;], 4)))
-    print(&#34;Published: {}, \tCalculated: {}, \ta1*10&#34;.format(pub[&#34;a1&#34;], round(out[&#34;a1&#34;], 4)))
-    print(&#34;Published: {}, \tCalculated: {}, \ta2*10**-2&#34;.format(pub[&#34;a2&#34;], round(out[&#34;a2&#34;], 4)))
-    print(&#34;Published: {}, \tCalculated: {}, \ta3&#34;.format(pub[&#34;a3&#34;], round(out[&#34;a3&#34;], 4)))
-    print(&#34;Published: {}, \tCalculated: {}, \ta4*10**-4&#34;.format(pub[&#34;a4&#34;], round(out[&#34;a4&#34;], 4)))
-    print(&#34;Published: {}, \tCalculated: {}, \tc1&#34;.format(pub[&#34;c1&#34;], round(out[&#34;c1&#34;], 4)))
-    print(&#34;Published: {}, \tCalculated: {}, \tc2*10**-4&#34;.format(pub[&#34;c2&#34;], round(out[&#34;c2&#34;], 4)))
-    print(&#34;&#34;)
-    for e in eq:
-        print(e)
-    print(&#34;&#34;)
+    if not wrm_data_output:
+        return hkf, eqs_used
+        
+    else:
+        if name != None:
+            hkf[&#34;name&#34;] = name
+        if abbrv != None:
+            hkf[&#34;abbrv&#34;] = abbrv
+        if formula != None:
+            hkf[&#34;formula&#34;] = formula
+        if formula_ox != None:
+            hkf[&#34;formula_ox&#34;] = formula_ox
+        if azero != None:
+            hkf[&#34;azero&#34;] = azero
+        if dissrxn != None:
+            hkf[&#34;dissrxn&#34;] = dissrxn
+        if tag != None:
+            hkf[&#34;tag&#34;] = tag
+        if neutral_ion_type != None:
+            hkf[&#34;neutral_ion_type&#34;] = neutral_ion_type
+        
+        this_date = datetime.today().strftime(&#39;%Y%m%d&#39;) 
+        
+        def _est_azero(Z):
+            azero = 4
+            if Z == 2:
+                azero = 6
+            elif Z == 3:
+                azero = 9
+            elif Z == 4:
+                azero = 11
 
-    print(&#34;S2O6-2\n---------&#34;)
-    print(&#34;Input parameters:&#34;)
-    print(&#34;find_HKF(Gf=--231000, Hf=-280400, Saq=30, Cp=-46.5, V=43.3, Z=-2, organic=False)\n&#34;)
-    out, eq = find_HKF(Gf=--231000, Hf=-280400, Saq=30, Cp=-46.5, V=43.3, Z=-2, organic=False)
-    pub = {&#34;omega&#34;:&#34;2.7587&#34;, &#34;a1&#34;:&#34;8.6225&#34;, &#34;a2&#34;:&#34;13.2724&#34;,
-           &#34;a3&#34;:&#34;0.5334&#34;, &#34;a4&#34;:&#34;-3.3277&#34;, &#34;c1&#34;:&#34;4.3301&#34;, &#34;c2&#34;:&#34;-12.5066&#34;}
-    print(&#34;Published: {}, \tCalculated: {}, \tomega*10**-5&#34;.format(pub[&#34;omega&#34;], round(out[&#34;omega&#34;], 4)))
-    print(&#34;Published: {}, \tCalculated: {}, \ta1*10&#34;.format(pub[&#34;a1&#34;], round(out[&#34;a1&#34;], 4)))
-    print(&#34;Published: {}, \tCalculated: {}, \ta2*10**-2&#34;.format(pub[&#34;a2&#34;], round(out[&#34;a2&#34;], 4)))
-    print(&#34;Published: {}, \tCalculated: {}, \ta3&#34;.format(pub[&#34;a3&#34;], round(out[&#34;a3&#34;], 4)))
-    print(&#34;Published: {}, \tCalculated: {}, \ta4*10**-4&#34;.format(pub[&#34;a4&#34;], round(out[&#34;a4&#34;], 4)))
-    print(&#34;Published: {}, \tCalculated: {}, \tc1&#34;.format(pub[&#34;c1&#34;], round(out[&#34;c1&#34;], 4)))
-    print(&#34;Published: {}, \tCalculated: {}, \tc2*10**-4&#34;.format(pub[&#34;c2&#34;], round(out[&#34;c2&#34;], 4)))
-    print(&#34;&#34;)
-    for e in eq:
-        print(e)
-    print(&#34;&#34;)
-
-    print(&#34;SELECT ITEMS FROM SHOCK AND HELGESON 1990, TABLE 6\n---------------------------------------------\n&#34;)
-    
-    print(&#34;1-hexanamine\n---------&#34;)
-    print(&#34;Input parameters:&#34;)
-    print(&#34;find_HKF(Gf=14860, Hf=-46320, Saq=60.2, Cp=144, V=121.6, Z=0, organic=True)\n&#34;)
-    out, eq = find_HKF(Gf=14860, Hf=-46320, Saq=60.2, Cp=144, V=121.6, Z=0, organic=True)
-    pub = {&#34;omega&#34;:&#34;-0.5717&#34;, &#34;a1&#34;:&#34;18.2115&#34;, &#34;a2&#34;:&#34;28.2822&#34;,
-           &#34;a3&#34;:&#34;12.6611&#34;, &#34;a4&#34;:&#34;-3.9481&#34;, &#34;c1&#34;:&#34;127.1903&#34;, &#34;c2&#34;:&#34;5.6804&#34;}
-    print(&#34;Published: {}, \tCalculated: {}, \tomega*10**-5&#34;.format(pub[&#34;omega&#34;], round(out[&#34;omega&#34;], 4)))
-    print(&#34;Published: {}, \tCalculated: {}, \ta1*10&#34;.format(pub[&#34;a1&#34;], round(out[&#34;a1&#34;], 4)))
-    print(&#34;Published: {}, \tCalculated: {}, \ta2*10**-2&#34;.format(pub[&#34;a2&#34;], round(out[&#34;a2&#34;], 4)))
-    print(&#34;Published: {}, \tCalculated: {}, \ta3&#34;.format(pub[&#34;a3&#34;], round(out[&#34;a3&#34;], 4)))
-    print(&#34;Published: {}, \tCalculated: {}, \ta4*10**-4&#34;.format(pub[&#34;a4&#34;], round(out[&#34;a4&#34;], 4)))
-    print(&#34;Published: {}, \tCalculated: {}, \tc1&#34;.format(pub[&#34;c1&#34;], round(out[&#34;c1&#34;], 4)))
-    print(&#34;Published: {}, \tCalculated: {}, \tc2*10**-4&#34;.format(pub[&#34;c2&#34;], round(out[&#34;c2&#34;], 4)))
-    print(&#34;&#34;)
-    for e in eq:
-        print(e)
-    print(&#34;&#34;)
-
-    print(&#34;n-hexylbenzene\n---------&#34;)
-    print(&#34;Input parameters:&#34;)
-    print(&#34;find_HKF(Gf=40390, Hf=-25590, Saq=76.2, Cp=208.4, V=177, Z=0, organic=True)\n&#34;)
-    out, eq = find_HKF(Gf=40390, Hf=-25590, Saq=76.2, Cp=208.4, V=177, Z=0, organic=True)
-    pub = {&#34;omega&#34;:&#34;-0.8140&#34;, &#34;a1&#34;:&#34;25.7106&#34;, &#34;a2&#34;:&#34;43.2732&#34;,
-           &#34;a3&#34;:&#34;13.8894&#34;, &#34;a4&#34;:&#34;-4.5678&#34;, &#34;c1&#34;:&#34;180.5115&#34;, &#34;c2&#34;:&#34;10.0338&#34;}
-    print(&#34;Published: {}, \tCalculated: {}, \tomega*10**-5&#34;.format(pub[&#34;omega&#34;], round(out[&#34;omega&#34;], 4)))
-    print(&#34;Published: {}, \tCalculated: {}, \ta1*10&#34;.format(pub[&#34;a1&#34;], round(out[&#34;a1&#34;], 4)))
-    print(&#34;Published: {}, \tCalculated: {}, \ta2*10**-2&#34;.format(pub[&#34;a2&#34;], round(out[&#34;a2&#34;], 4)))
-    print(&#34;Published: {}, \tCalculated: {}, \ta3&#34;.format(pub[&#34;a3&#34;], round(out[&#34;a3&#34;], 4)))
-    print(&#34;Published: {}, \tCalculated: {}, \ta4*10**-4&#34;.format(pub[&#34;a4&#34;], round(out[&#34;a4&#34;], 4)))
-    print(&#34;Published: {}, \tCalculated: {}, \tc1&#34;.format(pub[&#34;c1&#34;], round(out[&#34;c1&#34;], 4)))
-    print(&#34;Published: {}, \tCalculated: {}, \tc2*10**-4&#34;.format(pub[&#34;c2&#34;], round(out[&#34;c2&#34;], 4)))
-    print(&#34;&#34;)
-    for e in eq:
-        print(e)
-    print(&#34;&#34;)
-    
-    print(&#34;SELECT ITEMS FROM SHOCK 1995, TABLE 4\n---------------------------------------------\n&#34;)
-
-    print(&#34;hexanoic acid\n---------&#34;)
-    print(&#34;Input parameters:&#34;)
-    print(&#34;find_HKF(Gf=-87120, Hf=-139290, Saq=69.5, Cp=125.0, V=116.55, Z=0, organic=True, organic_acid=True)\n&#34;)
-    out, eq = find_HKF(Gf=-87120, Hf=-139290, Saq=69.5, Cp=125.0, V=116.55, Z=0, organic=True, organic_acid=True)
-    pub = {&#34;omega&#34;:&#34;-0.1266&#34;, &#34;a1&#34;:&#34;17.6709&#34;, &#34;a2&#34;:&#34;33.3251&#34;,
-           &#34;a3&#34;:&#34;-2.9700&#34;, &#34;a4&#34;:&#34;-4.1566&#34;, &#34;c1&#34;:&#34;108.8183&#34;, &#34;c2&#34;:&#34;7.3890&#34;}
-    print(&#34;Published: {}, \tCalculated: {}, \tomega*10**-5&#34;.format(pub[&#34;omega&#34;], round(out[&#34;omega&#34;], 4)))
-    print(&#34;Published: {}, \tCalculated: {}, \ta1*10&#34;.format(pub[&#34;a1&#34;], round(out[&#34;a1&#34;], 4)))
-    print(&#34;Published: {}, \tCalculated: {}, \ta2*10**-2&#34;.format(pub[&#34;a2&#34;], round(out[&#34;a2&#34;], 4)))
-    print(&#34;Published: {}, \tCalculated: {}, \ta3&#34;.format(pub[&#34;a3&#34;], round(out[&#34;a3&#34;], 4)))
-    print(&#34;Published: {}, \tCalculated: {}, \ta4*10**-4&#34;.format(pub[&#34;a4&#34;], round(out[&#34;a4&#34;], 4)))
-    print(&#34;Published: {}, \tCalculated: {}, \tc1&#34;.format(pub[&#34;c1&#34;], round(out[&#34;c1&#34;], 4)))
-    print(&#34;Published: {}, \tCalculated: {}, \tc2*10**-4&#34;.format(pub[&#34;c2&#34;], round(out[&#34;c2&#34;], 4)))
-    print(&#34;&#34;)
-    for e in eq:
-        print(e)
-    print(&#34;&#34;)
-    
-    print(&#34;hexanoate\n---------&#34;)
-    print(&#34;Input parameters:&#34;)
-    print(&#34;ind_HKF(Gf=-80490, Hf=-139870, Saq=45.3, Cp=90, V=102.21, Z=-1, organic=True, organic_acid=True)\n&#34;)
-    out, eq = find_HKF(Gf=-80490, Hf=-139870, Saq=45.3, Cp=90, V=102.21, Z=-1, organic=True, organic_acid=True)
-    pub = {&#34;omega&#34;:&#34;0.9427&#34;, &#34;a1&#34;:&#34;16.0700&#34;, &#34;a2&#34;:&#34;29.6995&#34;,
-           &#34;a3&#34;:&#34;-2.1530&#34;, &#34;a4&#34;:&#34;-4.0067&#34;, &#34;c1&#34;:&#34;104.8115&#34;, &#34;c2&#34;:&#34;-3.0151&#34;}
-    print(&#34;Published: {}, \tCalculated: {}, \tomega*10**-5&#34;.format(pub[&#34;omega&#34;], round(out[&#34;omega&#34;], 2)))
-    print(&#34;Published: {}, \tCalculated: {}, \ta1*10&#34;.format(pub[&#34;a1&#34;], round(out[&#34;a1&#34;], 4)))
-    print(&#34;Published: {}, \tCalculated: {}, \ta2*10**-2&#34;.format(pub[&#34;a2&#34;], round(out[&#34;a2&#34;], 4)))
-    print(&#34;Published: {}, \tCalculated: {}, \ta3&#34;.format(pub[&#34;a3&#34;], round(out[&#34;a3&#34;], 4)))
-    print(&#34;Published: {}, \tCalculated: {}, \ta4*10**-4&#34;.format(pub[&#34;a4&#34;], round(out[&#34;a4&#34;], 4)))
-    print(&#34;Published: {}, \tCalculated: {}, \tc1&#34;.format(pub[&#34;c1&#34;], round(out[&#34;c1&#34;], 4)))
-    print(&#34;Published: {}, \tCalculated: {}, \tc2*10**-4&#34;.format(pub[&#34;c2&#34;], round(out[&#34;c2&#34;], 4)))
-    print(&#34;&#34;)
-    for e in eq:
-        print(e)
-    print(&#34;&#34;)
-
-    
-    print(&#34;PLYASUNOV AND SHOCK 2001, TABLE 4\n---------------------------------------------&#34;)
-    print(&#34;Input parameters published in the table are converted from kJ or J into calorie-based units for find_HKF()\n&#34;)
-    
-    print(&#34;SO2\n---------&#34;)
-    print(&#34;Input parameters:&#34;)
-    print(&#34;Gh=-0.51/4.184*1000, V=39.0, Cp=146/4.184, Z=0, organic=True\n&#34;)
-    out, eq = find_HKF(Gh=-0.51/4.184*1000, V=39.0, Cp=146/4.184, Z=0, organic=True)
-    pub = {&#34;omega&#34;:&#34;-0.95&#34;, &#34;a1&#34;:&#34;32.02&#34;, &#34;a2&#34;:&#34;25.17&#34;,
-           &#34;a3&#34;:&#34;18.71&#34;, &#34;a4&#34;:&#34;-10.79&#34;, &#34;c1&#34;:&#34;93.2&#34;, &#34;c2&#34;:&#34;20.97&#34;}
-    print(&#34;Published: {}, \tCalculated: {}, \tomega*10**-5&#34;.format(pub[&#34;omega&#34;], round(out[&#34;omega&#34;]*4.184, 2)))
-    print(&#34;Published: {}, \tCalculated: {}, \ta1*10&#34;.format(pub[&#34;a1&#34;], round(out[&#34;a1&#34;]*4.184, 2)))
-    print(&#34;Published: {}, \tCalculated: {}, \ta2*10**-2&#34;.format(pub[&#34;a2&#34;], round(out[&#34;a2&#34;]*4.184, 2)))
-    print(&#34;Published: {}, \tCalculated: {}, \ta3&#34;.format(pub[&#34;a3&#34;], round(out[&#34;a3&#34;]*4.184, 2)))
-    print(&#34;Published: {}, \tCalculated: {}, \ta4*10**-4&#34;.format(pub[&#34;a4&#34;], round(out[&#34;a4&#34;]*4.184, 2)))
-    print(&#34;Published: {}, \tCalculated: {}, \tc1&#34;.format(pub[&#34;c1&#34;], round(out[&#34;c1&#34;]*4.184, 1)))
-    print(&#34;Published: {}, \tCalculated: {}, \tc2*10**-4&#34;.format(pub[&#34;c2&#34;], round(out[&#34;c2&#34;]*4.184, 2)))
-    print(&#34;&#34;)
-    for e in eq:
-        print(e)
-    print(&#34;&#34;)
-    
-    print(&#34;Pyridine\n---------&#34;)
-    print(&#34;Input parameters:&#34;)
-    print(&#34;Gh=-11.7/4.184*1000, V=77.1, Cp=306/4.184, Z=0, organic=True\n&#34;)
-    out, eq = find_HKF(Gh=-11.7/4.184*1000, V=77.1, Cp=306/4.184, Z=0)
-    pub = {&#34;omega&#34;:&#34;-0.56&#34;, &#34;a1&#34;:&#34;64.89&#34;, &#34;a2&#34;:&#34;45.62&#34;,
-           &#34;a3&#34;:&#34;69.94&#34;, &#34;a4&#34;:&#34;-28.50&#34;, &#34;c1&#34;:&#34;278.1&#34;, &#34;c2&#34;:&#34;11.47&#34;}
-    print(&#34;Published: {}, \tCalculated: {}, \tomega*10**-5&#34;.format(pub[&#34;omega&#34;], round(out[&#34;omega&#34;]*4.184, 2)))
-    print(&#34;Published: {}, \tCalculated: {}, \ta1*10&#34;.format(pub[&#34;a1&#34;], round(out[&#34;a1&#34;]*4.184, 2)))
-    print(&#34;Published: {}, \tCalculated: {}, \ta2*10**-2&#34;.format(pub[&#34;a2&#34;], round(out[&#34;a2&#34;]*4.184, 2)))
-    print(&#34;Published: {}, \tCalculated: {}, \ta3&#34;.format(pub[&#34;a3&#34;], round(out[&#34;a3&#34;], 2)))
-    print(&#34;Published: {}, \tCalculated: {}, \ta4*10**-4&#34;.format(pub[&#34;a4&#34;], round(out[&#34;a4&#34;]*4.184, 2)))
-    print(&#34;Published: {}, \tCalculated: {}, \tc1&#34;.format(pub[&#34;c1&#34;], round(out[&#34;c1&#34;]*4.184, 1)))
-    print(&#34;Published: {}, \tCalculated: {}, \tc2*10**-4&#34;.format(pub[&#34;c2&#34;], round(out[&#34;c2&#34;]*4.184, 2)))
-    print(&#34;&#34;)
-    for e in eq:
-        print(e)
-    print(&#34;&#34;)
-    
-    print(&#34;1,4-Butanediol\n---------&#34;)
-    print(&#34;Input parameters:&#34;)
-    print(&#34;Gh=-37.7/4.184*1000, V=88.23, Cp=347/4.184, Z=0, organic=True\n&#34;)
-    out, eq = find_HKF(Gh=-37.7/4.184*1000, V=88.23, Cp=347/4.184, Z=0, organic=True)
-    pub = {&#34;omega&#34;:&#34;0.08&#34;, &#34;a1&#34;:&#34;78.50&#34;, &#34;a2&#34;:&#34;41.17&#34;,
-           &#34;a3&#34;:&#34;76.32&#34;, &#34;a4&#34;:&#34;-30.87&#34;, &#34;c1&#34;:&#34;369.2&#34;, &#34;c2&#34;:&#34;-10.61&#34;}
-    print(&#34;Published: {}, \tCalculated: {}, \tomega*10**-5&#34;.format(pub[&#34;omega&#34;], round(out[&#34;omega&#34;]*4.184, 2)))
-    print(&#34;Published: {}, \tCalculated: {}, \ta1*10&#34;.format(pub[&#34;a1&#34;], round(out[&#34;a1&#34;]*4.184, 2)))
-    print(&#34;Published: {}, \tCalculated: {}, \ta2*10**-2&#34;.format(pub[&#34;a2&#34;], round(out[&#34;a2&#34;]*4.184, 2)))
-    print(&#34;Published: {}, \tCalculated: {}, \ta3&#34;.format(pub[&#34;a3&#34;], round(out[&#34;a3&#34;]*4.184, 2)))
-    print(&#34;Published: {}, \tCalculated: {}, \ta4*10**-4&#34;.format(pub[&#34;a4&#34;], round(out[&#34;a4&#34;]*4.184, 2)))
-    print(&#34;Published: {}, \tCalculated: {}, \tc1&#34;.format(pub[&#34;c1&#34;], round(out[&#34;c1&#34;]*4.184, 1)))
-    print(&#34;Published: {}, \tCalculated: {}, \tc2*10**-4&#34;.format(pub[&#34;c2&#34;], round(out[&#34;c2&#34;]*4.184, 2)))
-    print(&#34;&#34;)
-    for e in eq:
-        print(e)
-    print(&#34;&#34;)
-    
-    print(&#34;beta-alanine\n---------&#34;)
-    print(&#34;Input parameters:&#34;)
-    print(&#34;Gh=-74/4.184*1000, V=58.7, Cp=76/4.184, Z=0, organic=True\n&#34;)
-    out, eq = find_HKF(Gh=-74/4.184*1000, V=58.7, Cp=76/4.184, Z=0, organic=True)
-    pub = {&#34;omega&#34;:&#34;0.64&#34;, &#34;a1&#34;:&#34;56.17&#34;, &#34;a2&#34;:&#34;17.14&#34;,
-           &#34;a3&#34;:&#34;54.55&#34;, &#34;a4&#34;:&#34;-20.90&#34;, &#34;c1&#34;:&#34;165.5&#34;, &#34;c2&#34;:&#34;-41.43&#34;}
-    print(&#34;Published: {}, \tCalculated: {}, \tomega*10**-5&#34;.format(pub[&#34;omega&#34;], round(out[&#34;omega&#34;]*4.184, 2)))
-    print(&#34;Published: {}, \tCalculated: {}, \ta1*10&#34;.format(pub[&#34;a1&#34;], round(out[&#34;a1&#34;]*4.184, 2)))
-    print(&#34;Published: {}, \tCalculated: {}, \ta2*10**-2&#34;.format(pub[&#34;a2&#34;], round(out[&#34;a2&#34;]*4.184, 2)))
-    print(&#34;Published: {}, \tCalculated: {}, \ta3&#34;.format(pub[&#34;a3&#34;], round(out[&#34;a3&#34;]*4.184, 2)))
-    print(&#34;Published: {}, \tCalculated: {}, \ta4*10**-4&#34;.format(pub[&#34;a4&#34;], round(out[&#34;a4&#34;]*4.184, 2)))
-    print(&#34;Published: {}, \tCalculated: {}, \tc1&#34;.format(pub[&#34;c1&#34;], round(out[&#34;c1&#34;]*4.184, 1)))
-    print(&#34;Published: {}, \tCalculated: {}, \tc2*10**-4&#34;.format(pub[&#34;c2&#34;], round(out[&#34;c2&#34;]*4.184, 2)))
-    print(&#34;&#34;)
-    for e in eq:
-        print(e)
-    print(&#34;&#34;)</code></pre>
+            eqs_used.append(&#34;azero estimated as {}&#34;.format(azero)) # todo: track down where this comes from
+            return azero
+        
+        if &#39;azero&#39; in list(hkf.keys()):
+            if hkf[&#39;azero&#39;] == None:
+                azero = _est_azero(hkf[&#39;Z&#39;])
+            else:
+                azero = hkf[&#39;azero&#39;]
+        else:
+            azero = _est_azero(hkf[&#39;Z&#39;])
+        
+        if hkf[&#39;organic&#39;] or hkf[&#39;organic_acid&#39;]:
+            cat_1 = &#34;organic_aq&#34;
+        else:
+            cat_1 = &#34;inorganic_aq&#34;
+        
+        if &#39;dissrxn&#39; in list(hkf.keys()):
+            if hkf[&#39;dissrxn&#39;] != None:
+                dissrxn = hkf[&#39;dissrxn&#39;]
+            else:
+                dissrxn = &#34;&#34;
+        else:
+            dissrxn = &#34;&#34;
+        
+        if &#39;tag&#39; in list(hkf.keys()):
+            if hkf[&#39;tag&#39;] != None:
+                tag = hkf[&#39;tag&#39;]
+            else:
+                tag = &#34;&#34;
+        else:
+            tag = &#34;&#34;
+        
+        if &#39;formula_ox&#39; in list(hkf.keys()):
+            if hkf[&#39;formula_ox&#39;] != None:
+                formula_ox = hkf[&#39;formula_ox&#39;]
+            else:
+                formula_ox = &#34;&#34;
+        else:
+            formula_ox = &#34;&#34;
+        
+        data={
+            &#34;name&#34;: [hkf[&#39;name&#39;]],
+            &#34;abbrv&#34;: [hkf[&#39;abbrv&#39;]],
+            &#34;formula&#34;: [hkf[&#39;formula&#39;]],
+            &#34;state&#34;: [&#34;aq&#34;],
+            &#34;ref1&#34;: [&#34;findHKF&#34;],
+            &#34;ref2&#34;: [&#34;&#34;],
+            &#34;date&#34;: [this_date],
+            &#34;E_units&#34;: [&#34;cal&#34;],
+            &#34;G&#34;: [hkf[&#39;G&#39;]],
+            &#34;H&#34;: [hkf[&#39;H&#39;]],
+            &#34;S&#34;: [hkf[&#39;S&#39;]],
+            &#34;Cp&#34;: [hkf[&#39;Cp&#39;]],
+            &#34;V&#34;: [hkf[&#39;V&#39;]],
+            &#34;a1.a&#34;: [hkf[&#39;a1&#39;]],
+            &#34;a2.b&#34;: [hkf[&#39;a2&#39;]],
+            &#34;a3.c&#34;: [hkf[&#39;a3&#39;]],
+            &#34;a4.d&#34;: [hkf[&#39;a4&#39;]],
+            &#34;c1.e&#34;: [hkf[&#39;c1&#39;]],
+            &#34;c2.f&#34;: [hkf[&#39;c2&#39;]],
+            &#34;omega.lambda&#34;: [hkf[&#39;omega&#39;]],
+            &#34;z.T&#34;:[hkf[&#39;Z&#39;]],
+            &#34;azero&#34;:[azero],
+            &#34;neutral_ion_type&#34;:[hkf[&#39;neutral_ion_type&#39;]],
+            &#34;dissrxn&#34;:[dissrxn],
+            &#34;tag&#34;:[tag],
+            &#34;formula_ox&#34;:[formula_ox],
+            &#34;category_1&#34;:[cat_1],
+            &#34;category_2&#34;:[&#34;&#34;],
+        }
+        df = pd.DataFrame(data)
+        return df, eqs_used</code></pre>
 </details>
-</section>
-<section>
-</section>
-<section>
-</section>
-<section>
-<h2 class="section-title" id="header-functions">Functions</h2>
-<dl>
-<dt id="WORMutils.find_HKF.find_HKF"><code class="name flex">
-<span>def <span class="ident">find_HKF</span></span>(<span>Gh=nan, V=nan, Cp=nan, Gf=nan, Hf=nan, Saq=nan, Z=nan, a1=nan, a2=nan, a3=nan, a4=nan, c1=nan, c2=nan, omega=nan, organic=False, organic_acid=False, volatile=False, HKF_scale=True, DEW=False, phase_TrPr=None, aq_complex=False, print_eq=False)</span>
-</code></dt>
-<dd>
 <div class="desc"><p>Estimate HKF parameters from standard state thermodynamic properties of an
 aqueous organic molecule.</p>
 <h2 id="parameters">Parameters</h2>
@@ -683,420 +650,57 @@ and 1 bar when not dissolved in water? Can be "cr", "gas", or "liq".</dd>
 an aqueous complex for the sake of the Deep Earth Water (DEW) model. If
 True, equation 129 from Sverjensky 2019 will be used. If False, equation
 8 in Appendix 1 of Sverjensky et al. 2014 will be used.</dd>
+<dt><strong><code>name</code></strong> :&ensp;<code>str</code>, optional</dt>
+<dd>Name of the compound. Used when <code>wrm_data_output</code>is True. If this
+compound is going to be used in conjunction with the WORM database, or
+be used with the AqEquil package, then ensure that the name you choose
+does not contain spaces (like "acetic-acid" or "my-custom-compound").</dd>
+<dt><strong><code>abbrv</code></strong> :&ensp;<code>str</code>, optional</dt>
+<dd>Abbreviation of the compound (e.g., "HexOOH" for hexanoic acid). Used
+when <code>wrm_data_output</code>is True.</dd>
+<dt><strong><code>formula</code></strong> :&ensp;<code>str</code>, optional</dt>
+<dd>Chemical formula for the compound. Used when <code>wrm_data_output</code>is True.</dd>
+<dt><strong><code>azero</code></strong> :&ensp;<code>str</code>, optional</dt>
+<dd>The azero parameter of the aqueous compound. Used when
+<code>wrm_data_output</code> is True. If no azero parameter is defined, then one
+will be estimated based on charge.</dd>
+<dt><strong><code>formula_ox</code></strong> :&ensp;<code>str</code>, optional</dt>
+<dd>Quantities of elements and their oxidation states in the compound. For
+example, methane's formula_ox would be 'C-4 4H+' and hexanoic acid's
+would be 'C-3 4C-2 O-2 C- H+'. Used when <code>wrm_data_output</code>is True.</dd>
+<dt><strong><code>dissrxn</code></strong> :&ensp;<code>str</code>, optional</dt>
+<dd>A dissociation reaction compatible with the 'dissrxn' column in the WORM
+database. This can be blank if this compound is meant to be a basis
+species. Used when <code>wrm_data_output</code>is True.</dd>
+<dt><strong><code>tag</code></strong> :&ensp;<code>str</code>, optional</dt>
+<dd>A tag compatible with the 'tag' column of the WORM database. Will be
+blank by default, representing a nonbasis species. Used when
+<code>wrm_data_output</code>is True.</dd>
+<dt><strong><code>neutral_ion_type</code></strong> :&ensp;<code>int</code>, default <code>0</code></dt>
+<dd>A neutral ion type compatible with the 'neutral_ion_type' column in the
+WORM database. The default of 0 means that it is not treated specially
+if the molecule has a charge of 0. Used when <code>wrm_data_output</code>is True.</dd>
+<dt><strong><code>wrm_data_output</code></strong> :&ensp;<code>bool</code>, default <code>False</code></dt>
+<dd>Output the results as a dataframe that is compatible with the WORM
+database and is therefore importable into AqEquil and pyCHNOSZ packages?</dd>
 <dt><strong><code>print_eq</code></strong> :&ensp;<code>bool</code>, default <code>False</code></dt>
 <dd>Print equations used in estimation? Equations are printed in the order
 they are calculated.</dd>
 </dl>
 <h2 id="returns">Returns</h2>
 <dl>
-<dt><strong><code>out_dict</code></strong> :&ensp;<code>dict</code></dt>
-<dd>A dictonary of properties and parameters.</dd>
+<dt><strong><code>hkf</code></strong> :&ensp;<code>dict</code> or <code>pandas.DataFrame</code></dt>
+<dd>If <code>wrm_data_output</code> is False, returns a dictonary of properties and
+parameters. Otherwise, returns a Pandas dataframe with a format that
+can be imported as thermodynamic data into AqEquil or pyCHNOSZ packages.</dd>
+<dt><strong><code>eq</code></strong> :&ensp;<code>list</code> of <code>strings</code></dt>
+<dd>A list of steps used to perform the estimation.</dd>
 </dl></div>
-<details class="source">
-<summary>
-<span>Expand source code</span>
-</summary>
-<pre><code class="python">def find_HKF(Gh=float(&#39;NaN&#39;), V=float(&#39;NaN&#39;), Cp=float(&#39;NaN&#39;),
-             Gf=float(&#39;NaN&#39;), Hf=float(&#39;NaN&#39;), Saq=float(&#39;NaN&#39;),
-             Z=float(&#39;NaN&#39;), a1=float(&#39;NaN&#39;), a2=float(&#39;NaN&#39;), a3=float(&#39;NaN&#39;),
-             a4=float(&#39;NaN&#39;), c1=float(&#39;NaN&#39;), c2=float(&#39;NaN&#39;),
-             omega=float(&#39;NaN&#39;), organic=False, organic_acid=False, volatile=False,
-             HKF_scale=True, DEW=False, phase_TrPr=None, aq_complex=False,
-             print_eq=False):
-    
-    &#34;&#34;&#34;
-    Estimate HKF parameters from standard state thermodynamic properties of an
-    aqueous organic molecule.
-    
-    Parameters
-    ----------
-    Gh : numeric
-        Standard state partial molal Gibbs free energy of hydration in cal/mol.
-    
-    V : numeric
-        Standard state partial molal volume in cm3/mol.
-    
-    Cp : numeric
-        Standard state partial molal heat capacity in cal/mol/K.
-    
-    Gf : numeric
-        Standard state partial molal Gibbs free energy of formation in cal/mol.
-    
-    Hf : numeric
-        Standard state partial molal enthalpy of formation in cal/mol.
-    
-    Saq : numeric
-        Standard state partial molal third law entropy in cal/mol/K.
-    
-    Z : numeric
-        The net charge of the molecule.
-
-    a1, a2, a3, a4, c1, c2, omega : numeric, optional
-        Parameters for the revised Helgeson Kirkham Flowers (HKF) equation of
-        state. If these are not provided, they will be estimated using published
-        correlation methods.
-
-    organic : bool, default False
-        Is this molecule organic? If so, correlations from Shock and Helgeson
-        1990 or Plyasunov and Shock 2001 will be used to estimate certain HKF
-        parameters. If the molecule is not organic, correlations from Shock and
-        Helgeson 1988 will be used to obtain parameters instead.
-
-    organic_acid : bool, default False
-        Is this molecule an organic acid or acid anion? If so, correlations
-        from Shock 1995 will be used to estimate certain HKF parameters, unless
-        a Gibbs free energy of hydration is provided, in which Plyasunov and
-        Shock 2001 will be used.
-
-    volatile : bool, default False
-        Is this molecule volatile? If volatile=True and organic=True,
-        equation 60 from Shock and Helgeson 1990 will be used to estimate the
-        HKF parameter omega. If volatile=False and organic=True, equation 61
-        will be used instead.
-
-    HKF_scale : bool, default True
-        Should the output contain scaled HKF parameters according to the common
-        convention?
-
-    DEW : bool, default False
-        Estimate HKF parameters according to Sverjensky et al. 2014? If
-        so, provides compatibility with the Deep Earth Water (DEW) model.
-
-    phase_TrPr : str, optional
-        Required for estimating HKF equation of state parameters for neutral
-        species using the DEW model. What is the phase of the species at 25 °C
-        and 1 bar when not dissolved in water? Can be &#34;cr&#34;, &#34;gas&#34;, or &#34;liq&#34;.
-
-    aq_complex : bool, default False
-        Determines whether the estimated a1 parameter will be representative of
-        an aqueous complex for the sake of the Deep Earth Water (DEW) model. If
-        True, equation 129 from Sverjensky 2019 will be used. If False, equation
-        8 in Appendix 1 of Sverjensky et al. 2014 will be used.
-        
-    print_eq : bool, default False
-        Print equations used in estimation? Equations are printed in the order
-        they are calculated.
-        
-    Returns
-    ----------
-    out_dict : dict
-        A dictonary of properties and parameters.
-    &#34;&#34;&#34;
-
-    eqs_used = [] # stores a list of strings that describes which equations were used in what order
-
-    Tr = 298.15 # K
-    theta = 228 # K
-    
-    # Born constants
-    Y = -5.802E-05 # 1/K
-    Q = 5.903E-07 # (1/bar)
-    X = -3.09*10**-7 # 1/K**2
-    
-    pfunk = 2601
-    conv = 41.8393
-
-    eta = 1.66027*10**5 # angstroms*cal/mol
-    eqs_used.append(&#34;eta = {} angstroms*cal/mol, Y = {} 1/K, Q = {} (1/bar), X = {} 1/K**2&#34;.format(eta, Y, Q, X))
-
-    # define abs_protonBorn, mentioned in text after Eq 47 in Shock and Helgeson 1988
-    abs_protonBorn = 0.5387 * 10**5
-    eqs_used.append(&#34;abs_protonBorn = 0.5387 * 10**5 cal/mol, mentioned in text after Eq 47 in Shock and Helgeson 1988&#34;)
-
-    # estimate omega if it isn&#39;t already supplied by the user
-    if pd.isnull(omega):
-
-        if not pd.isnull(Gh) and Z == 0:
-            eqs_used.append(&#34;Gh is provided and charge equals zero so estimate omega from Plyasunov and Shock 2001...&#34;)
-
-            Gh = Gh*4.184/1000 # convert Gh to kJ/mol temporarily due to the convention of using Joules in Plyasunov and Shock 2001
-
-            omega = (2.61+(324.1/(Gh-90.6)))/10**-5
-            eqs_used.append(&#34;omega = {} J/mol = (2.61+(324.1/(Gh-90.6)))/10**-5, Eq 8 in Plyasunov and Shock 2001&#34;.format(&#34;{0:.5g}&#34;.format(omega)))
-            omega = omega/4.184 # convert to calorie-based units
-
-            Gh = Gh*1000/4.184 # convert to calorie-based units
-    
-        elif Z == 0 and not DEW:
-            eqs_used.append(&#34;Gh is not provided and charge equals zero so estimate omega for neutral solutes from Shock and Helgeson 1990...&#34;)
-
-            if organic_acid and Z==0:
-                omega = 661.98*Saq - 58740
-                eqs_used.append(&#34;omega = {} cal/mol = 661.98*Saq - 58740, Eq 22 in Shock 1995&#34;.format(&#34;{0:.5g}&#34;.format(omega)))
-            elif organic:
-                if volatile:
-                    omega = -1514.4*Saq
-                    eqs_used.append(&#34;omega = {} cal/mol = -1514.4*Saq, Eq 60 in Shock and Helgeson 1990&#34;.format(&#34;{0:.5g}&#34;.format(omega)))
-                else:
-                    omega = -1514.4*Saq + 0.34*10**5
-                    eqs_used.append(&#34;omega = {} cal/mol = -1514.4*Saq + 0.34*10**5, Eq 61 in Shock and Helgeson 1990&#34;.format(&#34;{0:.5g}&#34;.format(omega)))
-            else:
-                # TODO: this assumption is for metal complexes. What about inorganic neutral species that are not complexes?
-                omega = -0.038E5
-                eqs_used.append(&#34;omega = -0.038E5 cal/mol, Eq 42 in Sverjensky et al 1997&#34;.format(&#34;{0:.5g}&#34;.format(omega)))
-        
-        elif DEW:
-            if Z == 0 and not isinstance(phase_TrPr, str):
-                msg = (&#34;Warning: please specify the phase of this species at 25 &#34;
-                       &#34;degrees C and 1 bar when not dissolved in water by &#34;
-                       &#34;setting the phase_TrPr parameter to either &#39;cr&#39;,&#34;
-                       &#34;&#39;gas&#39;, or &#39;liq&#39;. Assuming the phase is &#39;cr&#39; for now...&#34;)
-                print(msg)
-                phase_TrPr = &#34;cr&#34;
-            
-            if Z == 0 and phase_TrPr in [&#34;c&#34;, &#34;cr&#34;]:
-                omega = 0.3E5 # eq 125 in Sverjensky 2019
-            elif Z == 0 and phase_TrPr in [&#34;g&#34;, &#34;gas&#34;, &#34;l&#34;, &#34;liq&#34;]:
-                omega = -0.3E5 # eq 126 in Sverjensky 2019
-            else:
-                if Z &gt; 0:
-                    Bz = 0.544E5*Z # Eq 123 in Sverjensky 2019
-                else:
-                    Bz = 1.62E5*Z # Eq 124 in Sverjensky 2019
-                
-                omega = -1514.4*Saq + Bz # Eq 122 in Sverjensky 2019, Eq 58 in Shock and Helgeson 1990
-        
-        elif Z != 0 and not DEW:
-            
-                
-            # define alphaZ (described in text after Eq 59 in Shock and Helgeson 1990)
-            if (abs(Z) == 1):
-                alphaZ = 72
-            elif (abs(Z) == 2):
-                alphaZ = 141
-            elif (abs(Z) == 3):
-                alphaZ = 211
-            elif (abs(Z) == 4):
-                alphaZ = 286
-            else:
-                alphaZ = float(&#39;NaN&#39;)
-                
-            if print_eq and alphaZ != float(&#39;NaN&#39;):
-                eqs_used.append(&#34;alphaZ = {} because charge = {}, described in text after Eq 59 in Shock and Helgeson 1990&#34;.format(alphaZ, Z))
-                
-            if organic:
-                eqs_used.append(&#34;Gh is not provided, charge does not equal zero, and species is organic so estimate omega for ionic species from Shock and Helgeson 1990...&#34;)
-                
-                # define BZ
-                BZ = ((-alphaZ*eta)/(Y*eta - 100)) - Z * abs_protonBorn  # Eq 55 in Shock and Helgeson 1990
-                eqs_used.append(&#34;BZ = {} = ((-alphaZ*eta)/(Y*eta - 100)) - Z * abs_protonBorn, Eq 55 in Shock and Helgeson 1990&#34;.format(&#34;{0:.5g}&#34;.format(BZ)))
-
-                omega = -1514.4*Saq + BZ  # Eq 58 in Shock and Helgeson 1990
-                eqs_used.append(&#34;omega = {} cal/mol = -1514.4*Saq + BZ, Eq 58 in Shock and Helgeson 1990&#34;.format(&#34;{0:.5g}&#34;.format(omega)))
-    
-            else:
-                eqs_used.append(&#34;Gh is not provided, charge does not equal zero, and species is inorganic so estimate omega for ionic species from Shock and Helgeson 1988...&#34;)
-
-                ### METHOD FOR INORGANIC AQUEOUS ELECTROLYTES USING SHOCK AND HELGESON 1988:
-                rej = (Z**2 *(eta * Y - 100)/(Saq - alphaZ))  # Eqs 46+56+57 in Shock and Helgeson 1988
-                eqs_used.append(&#34;rej = {} = (Z**2 *(eta * Y - 100)/(Saq - alphaZ)), Eqs 46+56+57 in Shock and Helgeson 1988&#34;.format(&#34;{0:.5g}&#34;.format(rej)))
-        
-                #find ion absolute omega*10**-5
-                omega_abs_ion = (eta*(Z**2))/rej # Eq 45 in Shock and Helgeson 1988
-                eqs_used.append(&#34;omega_abs_ion = {} cal/mol = (eta*(charge**2))/rej, Eq 45 in Shock and Helgeson 1988&#34;.format(&#34;{0:.5g}&#34;.format(omega_abs_ion)))
-
-                #find ion omega
-                omega = omega_abs_ion-(Z*abs_protonBorn) # Eq 47 in Shock and Helgeson 1988
-                eqs_used.append(&#34;omega = {} cal/mol = omega_abs_ion-(Z*abs_protonBorn), Eq 47 in Shock and Helgeson 1988&#34;.format(&#34;{0:.5g}&#34;.format(omega)))
-    
-        else:
-            omega = float(&#39;NaN&#39;)
-
-    # find delta V solvation (cm3/mol)
-    Vs = -omega*Q*conv
-    eqs_used.append(&#34;Vs = {} cm3/mol = -omega*Q*conv, Eq 5 in Shock and Helgeson 1988, delta V solvation&#34;.format(&#34;{0:.5g}&#34;.format(Vs)))
-
-    Vn = V - Vs
-    eqs_used.append(&#34;Vn cm3/mol = {} cm3/mol = V - Vs, Eq 4 in Shock and Helgeson 1988, delta V nonsolvation&#34;.format(&#34;{0:.5g}&#34;.format(Vn)))
-
-    Cps = omega*Tr*X
-    eqs_used.append(&#34;Cps = {} cal/mol/K= omega*Tr*X, Eq 35 in Shock and Helgeson 1988, delta Cp solvation&#34;.format(&#34;{0:.5g}&#34;.format(Cps)))
-        
-    # find delta Cp nonsolvation (cal/mol*K)
-    Cpn = Cp - Cps  # Eq 29 in Shock and Helgeson 1988
-    eqs_used.append(&#34;Cpn = {} cal/mol/K = Cp - Cps, Eq 29 in Shock and Helgeson 1988, delta Cp nonsolvation&#34;.format(&#34;{0:.5g}&#34;.format(Cpn)))
-
-    # calculate a1-a4
-    if not pd.isnull(Gh) and Z == 0 and not DEW:
-        eqs_used.append(&#34;Gh is provided and charge is neutral, so estimate a1, a2, and a4 from Plysunov and Shock 2001&#34;)
-
-        sigma = float(&#34;NaN&#34;)
-        eqs_used.append(&#34;estimation of sigma is not required using this method from Plyasunov and Shock 2001...&#34;)
-        
-        # temporarily convert Gh into units of kJ/mol as per the convention of Plyasunov and Shock 2001
-        Gh = Gh*4.184/1000
-
-        if pd.isnull(a1):
-            a1 = ((0.820-(1.858*10**-3*Gh))*V)/10
-            eqs_used.append(&#34;a1 = {} J/mol/bar = ((0.820-(1.858*10**-3*Gh))*V)/10, Eq 10 in Plyasunov and Shock 2001&#34;.format(&#34;{0:.5g}&#34;.format(a1)))
-        else:
-            a1 = a1*4.184
-            eqs_used.append(&#34;a1 = {} J/mol/bar, supplied by user&#34;.format(&#34;{0:.5g}&#34;.format(a1)))
-
-        if pd.isnull(a2):
-            a2 = ((0.648+((0.00481)*(Gh)))*V)/1E-2
-            eqs_used.append(&#34;a2 = {} J/mol = ((0.648+((0.00481)*(Gh)))*V)/1E-2, Eq 11 in Plyasunov and Shock 2001&#34;.format(&#34;{0:.5g}&#34;.format(a2)))
-        else:
-            a2 = a2*4.184
-            eqs_used.append(&#34;a2 = {} J/mol, supplied by user&#34;.format(&#34;{0:.5g}&#34;.format(a2)))
-
-        if pd.isnull(a4):
-            a4 = (8.10-(0.746*a2*1E-2)+(0.219*Gh))/1E-4
-            eqs_used.append(&#34;a4 = {} (J*K)/mol = (8.10-(0.746*a2*1E-2)+(0.219*Gh))/1E-4, Eq 12 in Plyasunov and Shock 2001&#34;.format(&#34;{0:.5g}&#34;.format(a4)))
-        else:
-            a4 = a4*4.184
-            eqs_used.append(&#34;a4 = {} (J*K)/mol, supplied by user&#34;.format(&#34;{0:.5g}&#34;.format(a4)))
-        
-        # convert Gh, a1, a2, and a4 into calorie-based units
-        Gh = Gh*1000/4.184
-        a1 = a1/4.184
-        a2 = a2/4.184
-        a4 = a4/4.184
-    
-    else:
-        eqs_used.append(&#34;Gh is unavailable and/or charge is not 0&#34;)
-
-        if DEW:
-            Vs = -omega*(0.05903*10**-5*conv)
-
-            eqs_used.append(&#34;Vs = {} cm3/mol = -omega*(0.05903*10**-5*conv), Eq 120 in Sverjensky 2019&#34;.format(&#34;{0:.5g}&#34;.format(Vs)))
-            
-            Vn = V - Vs
-            
-            eqs_used.append(&#34;Vn = {} cm3/mol = V - Vs, nonsolvation contribution to volume&#34;.format(&#34;{0:.5g}&#34;.format(Vn)))
-
-            sigma = 1.11*Vn + 1.8
-            eqs_used.append(&#34;sigma = {} cm3/mol = 1.11*Vn + 1.8, Eq 130 in Sverjensky 2019 (Eq 87 in Shock and Helgeson 1988)&#34;.format(&#34;{0:.5g}&#34;.format(sigma)))
-
-            if pd.isnull(a1):
-                if Z == 0 or aq_complex:
-                    a1 = (0.1942*Vn + 1.5204)/10
-                    eqs_used.append(&#34;a1 = {} cal/mol/bar = 0.1942*Vn + 1.5204, sign-corrected version of Eq 12 in Sverjensky 2019 (sign of y-intercept was flipped)&#34;.format(&#34;{0:.5g}&#34;.format(a1)))
-                
-                else:
-                    a1 = ((0.1304*abs(Z) - 0.0217)*Vn  + (1.4567*abs(Z)+0.6187))/10
-                    eqs_used.append(&#34;a1 = {} cal/mol/bar = ((0.1304*abs(Z) - 0.0217)*Vn  + (1.4567*abs(Z)+0.6187))/10, Eq 8 in Appendix 1 of Sverjensky et al 2014&#34;.format(&#34;{0:.5g}&#34;.format(a1)))
-            else:
-                eqs_used.append(&#34;a1 = {} cal/mol/bar, supplied by user&#34;.format(&#34;{0:.5g}&#34;.format(a1)))
-        
-        else:
-            if pd.isnull(a1):
-                a1 = 1.3684E-2*Vn+0.1765
-                eqs_used.append(&#34;a1 = {} cal/mol/bar = 1.3684E-2*Vn+0.1765, Eq 85 in Shock and Helgeson 1988&#34;.format(&#34;{0:.5g}&#34;.format(a1)))
-            else:
-                eqs_used.append(&#34;a1 = {} cal/mol/bar, supplied by user&#34;.format(&#34;{0:.5g}&#34;.format(a1)))
-
-        if pd.isnull(a2):
-            if organic_acid:
-                sigma = 1.07143*Vn + 3.0
-                eqs_used.append(&#34;sigma cm3/mol = {} cm3/mol = 1.07143*Vn + 3.0, Eq 23 in Shock 1995&#34;.format(&#34;{0:.5g}&#34;.format(sigma)))
-                
-            elif organic and Z==0:
-                sigma = 1.0125*Vn
-                eqs_used.append(&#34;sigma cm3/mol = {} cm3/mol = 1.0125*Vn, Eq 63 in Shock and Helgeson 1990&#34;.format(&#34;{0:.5g}&#34;.format(sigma)))
-    
-            else:
-                sigma = 1.11*Vn + 1.8
-                eqs_used.append(&#34;sigma cm3/mol = {} cm3/mol = 1.11*Vn + 1.8, Eq 87 in Shock and Helgeson 1988&#34;.format(&#34;{0:.5g}&#34;.format(sigma)))
-        
-            
-            a2 = (sigma/conv-a1)*pfunk
-            eqs_used.append(&#34;a2 = {} cal/mol = (sigma/conv-a1)*pfunk, Eq 8 in Shock and Helgeson 1988, rearranged to solve for a2&#34;.format(&#34;{0:.5g}&#34;.format(a2)))
-        else:
-            eqs_used.append(&#34;a2 = {} cal/mol, supplied by user&#34;.format(&#34;{0:.5g}&#34;.format(a2)))
-
-        if pd.isnull(a4):
-            a4 = -4.134*a2-27790
-            eqs_used.append(&#34;a4 = {} (cal*K)/mol = -4.134*a2-27790, Eq 88 in Shock and Helgeson 1988&#34;.format(&#34;{0:.5g}&#34;.format(a4)))
-        else:
-            eqs_used.append(&#34;a4 = {} (cal*K)/mol, supplied by user&#34;.format(&#34;{0:.5g}&#34;.format(a4)))
-
-    # calculate c2
-    if not pd.isnull(Gh) and Z == 0:
-
-        # temporarily convert Gh into kJ/mol
-        Gh = Gh*4.184/1000
-
-        if pd.isnull(c2):
-            c2 = (21.4 + 0.849*Gh)/1E-4
-            eqs_used.append(&#34;c2 = {} (J*K)/mol = 21.4+(0.849*Gh), Eq 14 in Plyasunov and Shock 2001&#34;.format(&#34;{0:.5g}&#34;.format(c2)))
-        else:
-            c2 = c2*4.184
-            eqs_used.append(&#34;c2 = {} (J*K)/mol, supplied by user&#34;.format(&#34;{0:.5g}&#34;.format(c2)))
-        
-        # convert Gh and c2 into calorie-based units
-        Gh = Gh*1000/4.184
-        c2 = c2/4.184
-        
-    else:
-        if pd.isnull(c2):
-            if organic_acid and Z==0:
-                c2 = (0.0988*Cp - 4.961)/10**-4
-                eqs_used.append(&#34;c2 = {} (cal*K)/mol = (0.0988*Cp - 4.961)/10**-4, Eq 28 in Shock 1995&#34;.format(&#34;{0:.5g}&#34;.format(c2)))
-            elif organic_acid and Z != 0:
-                c2 = (0.01212*Cp - 4.106)/10**-4
-                eqs_used.append(&#34;c2 = {} (cal*K)/mol = (0.01212*Cp - 4.106)/10**-4, Eq 29 in Shock 1995&#34;.format(&#34;{0:.5g}&#34;.format(c2)))
-            elif organic and Z==0:
-                c2 = (0.0676*Cp - 4.054)/10**-4
-                eqs_used.append(&#34;c2 = {} (cal*K)/mol = (0.0676*Cp - 4.054)/10**-4, Eq 64 in Shock and Helgeson 1990&#34;.format(&#34;{0:.5g}&#34;.format(c2)))
-            else:
-                c2 = (0.2037*Cp - 3.0346)/10**-4
-                eqs_used.append(&#34;c2 = {} (cal*K)/mol = (0.2037*Cp - 3.0346)*10**-4, Eq 89 in Shock and Helgeson 1988&#34;.format(&#34;{0:.5g}&#34;.format(c2)))
-        else:
-            eqs_used.append(&#34;c2 = {} (cal*K)/mol, supplied by user&#34;.format(&#34;{0:.5g}&#34;.format(c2)))
-
-    if pd.isnull(c1):
-        c1 = Cpn-(c2*(1/(Tr-theta))**2)
-        eqs_used.append(&#34;c1 = {} cal/mol/K = Cpn-((c2*(1/(Tr-theta))**2), Eq 31 in Shock and Helgeson 1988, rearranged to solve for c1&#34;.format(&#34;{0:.5g}&#34;.format(c1)))
-    else:
-        eqs_used.append(&#34;c1 = {} cal/mol/K, supplied by user&#34;.format(&#34;{0:.5g}&#34;.format(c1)))
-
-    if pd.isnull(a3):
-        a3 = ((Vn/conv)-a1-a2/pfunk)*(Tr-theta)-(a4/pfunk)
-        eqs_used.append(&#34;a3 = {} (cal*K)/mol/bar = ((Vn/conv)-a1-a2/pfunk)*(Tr-theta)-(a4/pfunk), after Eq 11 in Shock and Helgeson 1988, rearranged to solve for a3.&#34;.format(&#34;{0:.5g}&#34;.format(a3)))
-    else:
-        eqs_used.append(&#34;a3 = {} (cal*K)/mol/bar, supplied by user&#34;.format(&#34;{0:.5g}&#34;.format(a3)))
-
-    if HKF_scale:
-        a1 = a1*10
-        a2 = a2*10**-2
-        a3 = a3
-        a4 = a4*10**-4
-        c1 = c1
-        c2 = c2*10**-4
-        omega = omega*10**-5
-
-    out_dict = {
-        &#34;G&#34;: Gf,
-        &#34;H&#34;: Hf,
-        &#34;S&#34;: Saq,
-        &#34;Cp&#34;: Cp,
-        &#34;V&#34;: V,
-        &#34;a1&#34;: a1,
-        &#34;a2&#34;: a2,
-        &#34;a3&#34;: a3,
-        &#34;a4&#34;: a4,
-        &#34;c1&#34;: c1,
-        &#34;c2&#34;: c2,
-        &#34;omega&#34;: omega,
-        &#34;Z&#34;: Z,
-        &#34;Vs&#34;: Vs,
-        &#34;Vn&#34;: Vn,
-        &#34;sigma&#34;: sigma}
-    
-    return out_dict, eqs_used</code></pre>
-</details>
 </dd>
 <dt id="WORMutils.find_HKF.find_HKF_test"><code class="name flex">
 <span>def <span class="ident">find_HKF_test</span></span>(<span>print_eq=False)</span>
 </code></dt>
 <dd>
-<div class="desc"><p>Test the HKF estimation function by regenerating published values.</p>
-<h2 id="parameters">Parameters</h2>
-<dl>
-<dt><strong><code>print_eq</code></strong> :&ensp;<code>bool</code>, default <code>False</code></dt>
-<dd>Print equations used in estimation?</dd>
-</dl></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
@@ -1302,6 +906,12 @@ they are calculated.</dd>
         print(e)
     print(&#34;&#34;)</code></pre>
 </details>
+<div class="desc"><p>Test the HKF estimation function by regenerating published values.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>print_eq</code></strong> :&ensp;<code>bool</code>, default <code>False</code></dt>
+<dd>Print equations used in estimation?</dd>
+</dl></div>
 </dd>
 </dl>
 </section>
@@ -1309,7 +919,6 @@ they are calculated.</dd>
 </section>
 </article>
 <nav id="sidebar">
-<h1>Index</h1>
 <div class="toc">
 <ul></ul>
 </div>
@@ -1329,7 +938,7 @@ they are calculated.</dd>
 </nav>
 </main>
 <footer id="footer">
-<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.6</a>.</p>
 </footer>
 </body>
 </html>
