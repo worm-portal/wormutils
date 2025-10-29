@@ -9,3 +9,4 @@ from .get_colors import get_colors
 from .can_connect_to import can_connect_to
 from .convert import assign_worm_db_col_dtypes
 from .import_package_resources import import_package_file
+from .parse_formula_ox import parse_formula_ox
