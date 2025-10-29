@@ -4,15 +4,15 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="WORMutils",
-    version="0.1.0",
+    name="wormutils",
+    version="0.2.0",
     author="Grayson Boyer",
     author_email="gmboyer@asu.edu",
     description="A package for common functions used in other WORM codes",
     long_description=long_description,
     long_description_content_type="text/markdown",
     entry_points={},
-    packages=['WORMutils'],
+    packages=['wormutils'],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
