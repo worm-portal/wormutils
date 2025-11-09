@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.6">
+<title>wormutils.get_colors API documentation</title>
+<meta name="description" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source > summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible;min-width:max-content}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin:1em 0}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+/* Collapse source docstrings */
+setTimeout(() => {
+[...document.querySelectorAll('.hljs.language-python > .hljs-string')]
+.filter(el => el.innerHTML.length > 200 && ['"""', "'''"].includes(el.innerHTML.substring(0, 3)))
+.forEach(el => {
+let d = document.createElement('details');
+d.classList.add('hljs-string');
+d.innerHTML = '<summary>"""</summary>' + el.innerHTML.substring(3);
+el.replaceWith(d);
+});
+}, 100);
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>wormutils.get_colors</code></h1>
+</header>
+<section id="section-intro">
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="wormutils.get_colors.get_colors"><code class="name flex">
+<span>def <span class="ident">get_colors</span></span>(<span>colormap, ncol, alpha=1.0, hide_traceback=True)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_colors(colormap, ncol, alpha=1.0, hide_traceback=True):
+
+    &#34;&#34;&#34;
+    Get a list of rgb values for a matplotlib colormap
+    
+    Parameters
+    ----------
+    colormap : str
+        Name of the colormap to color the scatterpoints. Accepts &#34;WORM&#34;,
+        &#34;colorblind&#34;, or matplotlib colormaps.
+        See https://matplotlib.org/stable/tutorials/colors/colormaps.html
+        The &#34;colorblind&#34; colormap is referenced from Wong, B. Points of view:
+        Color blindness. Nat Methods 8, 441 (2011).
+        https://doi.org/10.1038/nmeth.1618
+    
+    ncol : int
+        Number of colors to return in the list.
+    
+    alpha : float, default 1.0
+        An alpha value between 0.0 (transparent) and 1.0 (opaque).
+
+    hide_traceback : bool, default True
+        Hide traceback message when encountering errors handled by this function?
+        When True, error messages handled by this class will be short and to
+        the point.
+    
+    Returns
+    -------
+    colors : list
+        A list of rgb color tuples
+    &#34;&#34;&#34;
+    
+    err_handler = Error_Handler(clean=hide_traceback)
+    
+    qualitative_cmaps = [&#39;Pastel1&#39;, &#39;Pastel2&#39;, &#39;Paired&#39;, &#39;Accent&#39;,
+                         &#39;Dark2&#39;, &#39;Set1&#39;, &#39;Set2&#39;, &#39;Set3&#39;,
+                         &#39;tab10&#39;, &#39;tab20&#39;, &#39;tab20b&#39;, &#39;tab20c&#39;]
+    
+    if colormap == &#34;colorblind&#34;:
+        # colors from Wong B. 2011, https://doi.org/10.1038/nmeth.1618
+        colors = [(0, 0, 0, alpha), # black
+                  (230/255, 159/255, 0, alpha), # orange
+                  (86/255, 180/255, 233/255, alpha), # sky blue
+                  (0, 158/255, 115/255, alpha), # bluish green
+                  (240/255, 228/255, 66/255, alpha), # yellow
+                  (0, 114/255, 178/255, alpha), # blue
+                  (213/255, 94/255, 0, alpha), # vermillion
+                  (204/255, 121/255, 167/255, alpha)] # reddish purple
+        if ncol &lt;= len(colors):
+            return colors[:ncol]
+        else:
+            print(&#34;Switching from &#39;colorblind&#39; colormap to &#39;viridis&#39; because there are {} variables to plot.&#34;.format(ncol))
+            colormap = &#34;viridis&#34;
+    elif colormap == &#34;WORM&#34;:
+        colors = [(0, 0, 0, alpha), # black
+                  (22/255, 153/255, 211/255, alpha), # blue
+                  (232/255, 86/255, 66/255, alpha), # red
+                  (245/255, 171/255, 80/255, alpha), # orange
+                  (115/255, 108/255, 168/255, alpha), # purple
+                  (151/255, 208/255, 119/255, alpha), # green
+                  (47/255, 91/255, 124/255, alpha), # dark blue
+                  (119/255, 119/255, 119/255, alpha)] # gray
+        if ncol &lt;= len(colors):
+            return colors[:ncol]
+        else:
+            print(&#34;Switching from &#39;WORM&#39; colormap to &#39;viridis&#39; because there are {} variables to plot.&#34;.format(ncol))
+            colormap = &#34;viridis&#34;
+            
+    if colormap in qualitative_cmaps:
+        # handle qualitative (non-continuous) colormaps
+        colors = [plt.cm.__getattribute__(colormap).colors[i] for i in range(ncol)]
+        colors = [(c[0], c[1], c[2], alpha) for c in colors]
+    else:
+        # handle sequential (continuous) colormaps
+        norm = matplotlib.colors.Normalize(vmin=0, vmax=ncol-1)
+        try:
+            cmap = cm.__getattribute__(colormap)
+        except:
+            valid_colormaps = [cmap for cmap in dir(cm) if &#34;_&#34; not in cmap and cmap not in [&#34;LUTSIZE&#34;, &#34;MutableMapping&#34;, &#34;ScalarMappable&#34;, &#34;functools&#34;, &#34;datad&#34;, &#34;revcmap&#34;]]
+            err_handler.raise_exception(&#34;&#39;{}&#39;&#34;.format(colormap)+&#34; is not a recognized matplotlib colormap. &#34;
+                    &#34;Try one of these: {}&#34;.format(valid_colormaps))
+        m = cm.ScalarMappable(norm=norm, cmap=cmap)
+        colors = [m.to_rgba(i) for i in range(ncol)]
+        colors = [(c[0], c[1], c[2], alpha) for c in colors]
+    
+    return colors</code></pre>
+</details>
+<div class="desc"><p>Get a list of rgb values for a matplotlib colormap</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>colormap</code></strong> :&ensp;<code>str</code></dt>
+<dd>Name of the colormap to color the scatterpoints. Accepts "WORM",
+"colorblind", or matplotlib colormaps.
+See <a href="https://matplotlib.org/stable/tutorials/colors/colormaps.html">https://matplotlib.org/stable/tutorials/colors/colormaps.html</a>
+The "colorblind" colormap is referenced from Wong, B. Points of view:
+Color blindness. Nat Methods 8, 441 (2011).
+<a href="https://doi.org/10.1038/nmeth.1618">https://doi.org/10.1038/nmeth.1618</a></dd>
+<dt><strong><code>ncol</code></strong> :&ensp;<code>int</code></dt>
+<dd>Number of colors to return in the list.</dd>
+<dt><strong><code>alpha</code></strong> :&ensp;<code>float</code>, default <code>1.0</code></dt>
+<dd>An alpha value between 0.0 (transparent) and 1.0 (opaque).</dd>
+<dt><strong><code>hide_traceback</code></strong> :&ensp;<code>bool</code>, default <code>True</code></dt>
+<dd>Hide traceback message when encountering errors handled by this function?
+When True, error messages handled by this class will be short and to
+the point.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><strong><code>colors</code></strong> :&ensp;<code>list</code></dt>
+<dd>A list of rgb color tuples</dd>
+</dl></div>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="wormutils" href="index.html">wormutils</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="wormutils.get_colors.get_colors" href="#wormutils.get_colors.get_colors">get_colors</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.6</a>.</p>
+</footer>
+</body>
+</html>
